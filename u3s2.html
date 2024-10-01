@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MATH 1830 Notes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/notes.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/togglebuttons.js"></script>
+    <script src="js/loadmathjax.js"></script>
+   <script src="js/googlestats.js"></script>     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>     <script src="js/nav.js"></script>     <script src="js/togglepass.js"></script>
+    <!-- <script src="https://www.desmos.com/api/v0.6/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+    <script src="js/desmosgraphs.js"></script> -->
+
+
+</head>
+
+<body>
+ <nav ng-app="myApp" ng-controller="myCtrl" class="navbar navbar-default navbar-fixed-top">          <div class="container-fluid">              <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"                     aria-expanded="false">              <span class="sr-only">Toggle navigation</span>              <span class="icon-bar"></span>              <span class="icon-bar"></span>              <span class="icon-bar"></span>           </button> <a class="navbar-brand" ng-href="{{nav.titleUrl}}">{{nav.title}}</a> </div>              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">                 <ul class="nav navbar-nav">                      <li ng-repeat="u in nav.unit" class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"                             title="{{u.title}}">{{u.title}}<span class="caret"></span></a>                         <ul class="dropdown-menu">                             <li ng-repeat="n in u.nav"><a ng-href="{{n.url}}">{{n.urlText}}</a></li>                           </ul>                     </li>                  </ul>                 <ul class="nav navbar-nav navbar-right">                     <form class="navbar-form navbar-left">                         <div class="form-group">                             <input id="input" type="password" class="form-control" placeholder="pin-code">                         </div>                         <button id="submit" type="submit" class="btn btn-default">Show Solutions</button>                     </form>                   </ul>             </div>         </div>     </nav>
+
+
+    <div class="container">
+        <h1 id="u2toc">MATH 1830</h1>
+
+
+          <h2 >Unit 3 Derivative Rules</h2>
+
+
+
+
+
+
+          <h3>3.2 Derivatives of Exponential and Logarithmic Functions</h3>
+
+           <br><br>              
+          
+
+                    
+
+             
+
+                  
+
+
+                        <div class="panel panel-primary">
+                          <div class="panel-heading">
+                            <h3 class="panel-title">Derivatives of Exponentials and Logarithms </h3>
+                          </div>
+                          <div class="panel-body">
+
+                        <p>  $\quad \quad \frac d{dx}e^x=e^x$ </p>
+                        <p>   $\quad \quad \frac d{dx}b^x=b^x\ln b\;\quad \quad (b>0,\;b\neq1)$</p>
+
+                        <p>   $\quad \quad \frac d{dx}\ln x=\frac1x\;\quad \quad (x>0)$</p>
+                        <p>   $\quad \quad \frac d{dx}\log_bx=\left(\frac1{\ln b}\right)\left(\frac1x\right)\;\quad \quad (x>0,\;b>0,\;b\neq1)$</p>
+
+
+                          </div>
+                        </div>
+
+<br><br>
+
+<h4>3.2 Video</h4>
+
+
+<ol>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            Find $f&#39;\left( x \right)$ when $f(x) = 3{x^3} + 4{x^2} - 5x + 8.$</p>
+
+                        <p class="m1830-answer">$f&#39;(x) = 9{x^2} + 8x - 5$</p>
+
+                    </li>
+
+
+
+
+
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            Find $f&#39;\left( x \right)$ when $f\left( x \right)\; = \;\;\ln x\; - {x^3}\;\; + 2x+e^x.$</p>
+
+                        <p class="m1830-answer">$f&#39;(x) = \frac{1}{x} - 3{x^2} + 2+e^x$</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            Find $f&#39;\left( x \right)$ when $f\left( x \right)\; = \;\;4\ln x\; +5e^x\;\; - 7x^2.$</p>
+
+                        <p class="m1830-answer">$f&#39;(x) = \frac{4}{x} + 5e^x - 14x$</p>
+
+                    </li>
+<br><br>
+<h4>3.2 Lecture</h4>
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            Find $f&#39;\left( x \right)$ when $f\left( x \right)\; = \;\;\ln {x^8}\; - 3\ln x\;.$</p>
+                            <p class="m1830-solution"> $f(x)=8\ln x-3\ln x$ </p>
+                        <p class="m1830-solution">$f&#39;(x) = \frac{8}{x} - \frac{3}{x}$</p>
+                        <p class="m1830-answer">$f&#39;(x) = \frac{5}{x}$</p>
+
+                   
+
+                    </li>
+
+              <p><strong>Find the equation of the tangent line to the function at the given point.</strong></p>    
+                   
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            $f\left( x \right) = {e^x}\; + 2 \quad at \quad x = 0$</p>
+
+                        <p class="m1830-solution">Point: $\quad f(0) = {e^0} + 2 = 1 + 2 = 3$</p>
+                        <p class="m1830-answer m1830-step">$(0,3)$</p>
+
+                        <p class="m1830-solution">$f&#39;(x) = {e^x}$</p>
+                        <p class="m1830-solution">Slope: $\quad {m_{tan}}=f&#39;(0) = {e^0} = 1$</p>
+                        <p class="m1830-answer m1830-step">${m_{tan}}=1$</p>
+
+
+
+                        <p class="m1830-solution">$y - 3 = 1(x - 0)$</p>
+                        <p class="m1830-solution">$y - 3 = 1x - 0$</p>
+                        <p class="m1830-solution">$y = 1x + 3$</p>
+                        <p class="m1830-answer">$y = x + 3$</p>
+
+                    </li>
+<br><br>
+<h4>3.2 Group Work</h4>
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            $f\left( x \right) = 1\; + \ln {x^6} \quad at \quad x = e$</p>
+                            <p class="m1830-solution"> $f(x)=1+6lnx$</p>
+
+                        <p class="m1830-solution">Point: $\quad f(e) = 1 + 6\ln e  = 1 + 6(1) = 7$</p>
+                        <p class="m1830-answer m1830-step">$(e,7)$</p>
+
+                        <p class="m1830-solution">$f(x) = 1 + 6\ln x$</p>
+                        <p class="m1830-solution">$f&#39;(x) = 0 + \frac{6}{x}$</p>
+                        <p class="m1830-solution">Slope: $\quad {m_{tan}}=f&#39;(e) = \frac{6}{e}$</p>
+                        <p class="m1830-answer m1830-step">${m_{tan}}= \frac{6}{e}$</p>
+
+
+                        <p class="m1830-solution">$y - 7 = \frac{6}{e}(x - e)$</p>
+                        <p class="m1830-solution">$y - 7 = \frac{6}{e}x - 6$</p>
+                        <p class="m1830-answer">$y = \frac{6}{e}x + 1$</p>
+
+
+
+                        <p class="m1830-pagebreak"><strong>Applications:</strong></p>
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            The estimated resale value R (in dollars) of a company car after t years is given by $$R\left( t \right) = 24000{\left( {0.84} \right)^t}$$ What is the instantaneous rate of depreciation (in dollars per year) after:
+                            <ul>
+                              <li>1 year? </li>
+                              <li>2 years? </li>
+                              <li>3 years?</li>
+                            </ul>
+                          </p>
+
+                        <p class="m1830-solution">$R&#39;(t) = 24,000{\left( {.84} \right)^t}\;(\ln .84)$</p>
+
+
+                        <p class="m1830-solution">$R&#39;(1) = 24,000{\left( {.84} \right)^1}\;(\ln .84) = - \$3514.96/yr$</p>
+                        <p class="m1830-answer">The instantaneous rate of depreciation after 1 year is $3514.96 per year.</p>
+                        <p class="m1830-solution">$R&#39;(2) = 24,000{\left( {.84} \right)^2}(\ln .84) = - \$2952.57/yr$</p>
+                        <p class="m1830-answer">The instantaneous rate of depreciation after 2 years is $2952.57 per year.</p>
+                        <p class="m1830-solution">$R&#39;(3) = 24,000{\left( {.84} \right)^3}(\ln .84) = - \$2480.16/yr$</p>
+                        <p class="m1830-answer">The instantaneous rate of depreciation after 3 years is $2480.16 per year.</p>
+
+
+
+
+                    </li>
+            
+<br><br>
+
+
+    <h4>3.2 Additional Practice</h4>
+    <p><strong>Find the derivative of each of the following.</strong></p>
+    <!-- Begin section problem list  -->
+
+
+        <li class="m1830-problem">
+            <p class="m1830-problem-text"> $f(x) = {e^x} + \ln x - 2{x^5} + 12$</p>
+            <p class="m1830-hw-answer">$f&#39;(x) = {e^x} + \frac{1}{x} - 10{x^4}$</p>
+        </li>
+
+        <li class="m1830-problem">
+            <p class="m1830-problem-text"> $y = 7\ln x + 14x - \frac{1}{2}$</p>
+            <p class="m1830-hw-answer">${y&#39;} = \frac{7}{x} + 14$</p>
+        </li>
+
+        <li class="m1830-problem">
+            <p class="m1830-problem-text"> $g(x) = - 5{e^x} - 12\ln x + 3{x^3}$</p>
+            <p class="m1830-hw-answer">$g&#39;(x) = - 5{e^x} - \frac{{12}}{x} + 9{x^2}$</p>
+        </li>
+
+        <li class="m1830-problem">
+            <p class="m1830-problem-text"> $f(x) = 8\sqrt x + 7{e^x}$</p>
+            <p class="m1830-hw-solution">$f(x) = 8{x^{1/2}} + 7{e^x}$</p>
+            <p class="m1830-hw-solution">$f&#39;(x) = 4{x^{ - 1/2}} + 7{e^x}$</p>
+            <p class="m1830-hw-answer">$f&#39;(x) = \frac{4}{{\sqrt x }} + 7{e^x}$</p>
+        </li>
+
+        <li class="m1830-problem">
+            <p class="m1830-problem-text"> $y = \ln {x^7} - 3\ln x$</p>
+            <p class="m1830-hw-solution">$y = 7\ln x - 3\ln x$</p>
+            <p class="m1830-hw-solution">$y&#39; = \frac{7}{x} - \frac{3}{x}$</p>
+            <p class="m1830-hw-answer">$y&#39; = \frac{4}{x}$</p>
+        </li>
+
+        <li class="m1830-problem">
+            <p class="m1830-problem-text"> $f(x) = 4\ln \frac{1}{x} + 8$</p>
+            <p class="m1830-hw-solution">$f(x) = 4(\ln 1 - \ln x) + 8$</p>
+            <p class="m1830-hw-solution">$f(x) = 4\ln 1 - 4\ln x + 8$</p>
+            <p class="m1830-hw-solution">$f&#39;(x) = 0 - \frac{4}{x} + 0$</p>
+            <p class="m1830-hw-answer">$f&#39;(x) = \frac{{ - 4}}{x}$</p>
+        </li>
+
+        <li class="m1830-problem">
+            <p class="m1830-problem-text"> $y = {e^x} - 7\ln 5x + 14$</p>
+            <p class="m1830-hw-solution">$y = {e^x} - 7(\ln 5 + \ln x) + 14$</p>
+            <p class="m1830-hw-solution">$y = {e^x} - 7\ln 5 - 7\ln x + 14$</p>
+            <p class="m1830-hw-solution">$y&#39; = {e^x} - 0 - \frac{7}{x} + 0$</p>
+            <p class="m1830-hw-answer">$y&#39; = {e^x} - \frac{7}{x}$</p>
+
+        </li>
+
+        <li class="m1830-problem">
+            <p class="m1830-problem-text"> Find the equation of the line tangent to the graph of f at the indicated value of x.</p>
+            <p class="m1830-problem-text">$f(x) = 2{e^x} - 1\quad \quad at\quad x = 0$</p>
+            <p class="m1830-hw-solution">Point: $f(0) = 2{e^0} - 1$</p>
+            <p class="m1830-hw-solution">$f(0) = 2(1) - 1 = 1$</p>
+            <p class="m1830-hw-solution m1830-step">$(0,1)$</p>
+            <p class="m1830-hw-solution"> Slope: $f&#39;(x) = 2{e^x}$</p>
+            <p class="m1830-hw-solution m1830-step">${m_{\tan }} = f&#39;(0) = 2{e^0} = 2(1) = 2$</p>
+            <p class="m1830-hw-solution">Equation of the Line: $y - 1 = 2(x - 0)$</p>
+            <p class="m1830-hw-solution">$y - 1 = 2x$</p>
+            <p class="m1830-hw-answer">$y = 2x + 1$</p>
+        </li>
+
+        <li class="m1830-problem">
+            <p class="m1830-problem-text"> <strong>Find the equation of the line tangent to the graph of f at the indicated value of x.</strong></p>
+            <p class="m1830-problem-text">$f(x) = 8\ln (x)\quad \quad at\quad x = e$</p>
+            <p class="m1830-hw-solution">Point: $f(e) = 8\ln e$</p>
+            <p class="m1830-hw-solution">$f(e) = 8(1) = 8$</p>
+            <p class="m1830-hw-solution m1830-step">$(e,8)$</p>
+            <p class="m1830-hw-solution">Slope: $f&#39;(x) = \frac{8}{x}$</p>
+            <p class="m1830-hw-solution m1830-step">${m_{\tan }}=f&#39;(e) = \frac{8}{e}$</p>
+            <p class="m1830-hw-solution">Equation of the Line: $y - 8 = \frac{8}{e}(x - e)$</p>
+            <p class="m1830-hw-solution">$y - 8 = \frac{8}{e}x - 8$</p>
+            <p class="m1830-hw-answer">$y = \frac{{8x}}{e}$</p>
+        </li>
+
+        <li class="m1830-problem">
+            <p class="m1830-problem-text"> An editor of college textbooks has determined that the equation below models the sales of a calculus textbook, B (in thousands), based on the number of complimentary books sent to professors, x (also in thousands). $$B(x) = 3.24 +
+                1.6\ln \;(x)$$ Find and interpret the instantaneous rate of change when 6000 complimentary books are sent to professors, x=6.</p>
+            <p class="m1830-hw-solution">$B&#39;(x) = 0 + \frac{{1.6}}{x} = \frac{{1.6}}{x}$</p>
+            <p class="m1830-hw-solution">$B&#39;(6) = \frac{{1.6}}{6} = .2\overline {6} \approx .27$</p>
+            <p class="m1830-hw-answer">When 6000 complimentary books are sent to professors, the sales of textbooks increase by 270 (.27 thousand) books.</p>
+        </li>
+
+        <li class="m1830-problem">
+            <p class="m1830-problem-text"> The percentage of mothers who returned to the work force within one year after they had a child for the years 1976 through 1998 can be modeled by $$P(t) = 36.025 + 6.27\ln (t)$$ where t is years after 1977. (Source: Based on data from
+                the Associated Press)</p>
+            <ol>
+
+                <li>What percentage of mothers returned to the work force within one year in 1998 and how rapidly was that percentage changing in 1998?
+                    <p class="m1830-hw-solution">$t = 21\quad $when the year is 1998  </p>
+
+                    <p class="m1830-hw-solution">$P(21) = 36.025 + 6.27\;\ln (21) = 55.11\%$</p>
+                    <p class="m1830-hw-solution m1830-step">55.11% of mothers returned to the work force within one year in 1998.</p>
+                    <p class="m1830-hw-solution">$P&#39;(21) = \frac{{6.27}}{t} = \frac{{6.27}}{{21}} = 0.30\%$</p>
+                    <p class="m1830-hw-answer">The percentage of mothers returning to work within one year was increasing at a rate of $0.30\%.$</p>
+                </li>
+
+                <li>On average, how rapidly did the percentage change from 1980 to 1990?
+                    <p class="m1830-hw-solution">$\frac{{P(13) - P(3)}}{{13 - 3}} = \frac{{52.11 - 42.91}}{{13 - 3}} = \frac{{9.2}}{{10}} = .92\% $</p>
+                    <p class="m1830-hw-answer">The percent of mothers returning to the work force increased on average .92% per year.</p>
+                    c. What happens to the rate at which the percentage is growing as more years go by?
+                    <p class="m1830-hw-answer">As more years go by, the change in percentage grows at a slower rate.</p>
+                </li>
+            </ol>
+            <p><cite> <a href="http://www2.fiu.edu/~rosentha/MAC2233/2233CE.htm">http://www2.fiu.edu/~rosentha/MAC2233/2233CE.htm</a> (page 7 Section 3.3) </cite></p>
+
+        </li>
+    </ol>
+    <!-- End section problem list  -->
+
+
+
+
+
+
+
+
+    </div>
+    <!-- ending of body container -->
+</body>
+
+</html>

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MATH 1830 Notes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/notes.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/togglebuttons.js"></script>
+    <script src="js/loadmathjax.js"></script>
+   <script src="js/googlestats.js"></script>     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>     <script src="js/nav.js"></script>     <script src="js/togglepass.js"></script>
+    <!-- <script src="https://www.desmos.com/api/v0.6/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+    <script src="js/desmosgraphs.js"></script> -->
+
+
+</head>
+
+<body>
+     <nav ng-app="myApp" ng-controller="myCtrl" class="navbar navbar-default navbar-fixed-top">          <div class="container-fluid">              <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"                     aria-expanded="false">              <span class="sr-only">Toggle navigation</span>              <span class="icon-bar"></span>              <span class="icon-bar"></span>              <span class="icon-bar"></span>           </button> <a class="navbar-brand" ng-href="{{nav.titleUrl}}">{{nav.title}}</a> </div>              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">                 <ul class="nav navbar-nav">                      <li ng-repeat="u in nav.unit" class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"                             title="{{u.title}}">{{u.title}}<span class="caret"></span></a>                         <ul class="dropdown-menu">                             <li ng-repeat="n in u.nav"><a ng-href="{{n.url}}">{{n.urlText}}</a></li>                           </ul>                     </li>                  </ul>                 <ul class="nav navbar-nav navbar-right">                     <form class="navbar-form navbar-left">                         <div class="form-group">                             <input id="input" type="password" class="form-control" placeholder="pin-code">                         </div>                         <button id="submit" type="submit" class="btn btn-default">Show Solutions</button>                     </form>                   </ul>             </div>         </div>     </nav>
+
+
+    <div class="container">
+        <h1 id="u3toc">MATH 1830 Notes</h1>
+
+        <h2>Unit 3 Derivative Rules</h2>
+
+
+
+
+
+
+        <article class="notes">
+
+            <h3>3.6 Graph Analysis: Rational Functions</h3>
+
+<br>
+
+
+<div  class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">First Derivative Test </h3>
+    </div>
+    <div class="panel-body">
+                    <p>Analyze $f&#39;(x)$ to Identify Intervals of Increase/Decrease and Extrema on the Graph of $f(x).$ </p>
+                    <ol>
+                        <li>Find $f&#39;(x)$ </li>
+                        <li> Identify all critical numbers and partitions for the function.
+                            <ol>
+
+                                <li>Values of $x$ where$f&#39;(x)=0$ are critical numbers.</li>
+
+                                <li>Values of $x$ where $f&#39;(x)$ is undefined are partitions.</li>
+
+                                <li>Values of $x$ where $f(x)$ is undefined are partitions.</li>
+                            </ol>
+                        </li>
+                        <li>Graph the critical numbers and partitions on a number line, separating the number line into intervals.
+
+                        </li>
+
+                        <li>Determine the intervals on which $f(x)$ is increasing /decreasing
+                            <ol>
+
+                                <li>Test one point contained in the interval (do not use the end points of the interval).</li>
+
+                                <li>$f&#39;(x)&lt;0$ then the function $f(x)$ is DECREASING on the interval</li>
+
+                                <li>$f&#39;(x)&gt;0$ then the function $f(x)$ is INCREASING on the interval</li>
+                            </ol>
+                        </li>
+
+                        <li>Identify local maxima and minima of $f(x)$ using the First Derivative Test.
+                            <ol>
+
+                                <li>On the interval $(a,c)$, a local maximum occurs at $f(b)$ when $f(x)$ is increasing for all $x$ in the interval $(a,b]$ and $f(x)$ is decreasing for all $x$ in the interval $[b,c)$.</li>
+
+                                <li>On the interval $(a,c)$, a local minimum occurs at $f(b)$ when $f(x)$ is decreasing for all $x$ in the interval $(a,b]$ and $f(x)$ is increasing for all $x$ in the interval $[b,c)$.</li>
+                            </ol>
+                        </li>
+                    </ol>
+
+
+                </div>
+            </div>
+            <div  class="panel panel-primary">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Second Derivative Test </h3>
+                </div>
+                <div class="panel-body">
+                  <p>Analyze $f&#39;&#39;(x)$ to Identify Intervals of Concavity and Points of Inflection on the Graph of $f(x).$ </p>
+                  <ol>
+              
+              <li> Find $f&#39;&#39;(x).$</li>
+              <li> Find the critical numbers for the function.
+              <ol>
+              
+              <li>Values of $x$ where $f&#39;&#39;(x)=0$ are critical numbers.</li>
+              
+              <li>Values of $x$ where $f&#39;&#39;(x)$ is undefined are partitions. </li>
+              
+              <li>Values of $x$ where $f(x)$ is undefined are partitions.</li>
+              </ol>
+              </li>
+                      <li>Graph the critical numbers and partitions on a number line, separating the number line into intervals.
+              
+                      </li>
+              
+              
+                      <li>Determine the intervals on which $f(x)$ is concave up or concave down.
+                          <ol>
+              
+                              <li>Test one point contained in the interval (do not use the end points of the interval).</li>
+              
+                              <li>$f(x)$ is concave down on the interval if $f&#39;&#39;(x)&lt;0$. </li>
+              
+                              <li> $f(x)$ is concave up on the interval if $f&#39;&#39;(x)&gt;0$.</li>
+                          </ol>
+                      </li>
+              
+                      <li>Identify inflection points of $f(x)$. A point of inflection occurs at $x=a$ when $f&#39;&#39;(a)=0$ and $f&#39;&#39;(x)$ changes concavity across $a$.
+              
+                      </li>
+              
+                  </ol>
+              
+              
+              
+                </div>
+              </div>
+<p class="m1830-pagebreak"></p>
+
+<h4>3.6 Video</h4>
+            <p class="m1830-problem-text"><strong>Use the First & Second Derivative Tests to analyze the function. Identify x- & y-intercepts, any holes or asymptotes (if they exist), intervals of increase/decrease, extrema, interval of concavity, and inflection points on the graph of the function.</strong> </p>
+            <ol>
+
+
+
+
+
+
+                <li class="m1830-problem m1830-pagebreak">
+                    <p class="m1830-problem-text"> $f(x)=\frac{3x+4}{2x-5}$</p>
+
+                    <ol>
+                        <li>
+                            <p >Increasing and Decreasing</p>
+
+                            <p class="m1830-solution">${f}&#39;\left( x \right)=\frac{3\left( 2x-5 \right)-2\left( 3x+4 \right)}{{{\left( 2x-5 \right)}^{2}}}=\frac{6x-15-6x-8}{{{\left( 2x-5 \right)}^{2}}}=\frac{-23}{{{\left( 2x-5 \right)}^{2}}}$</p>
+
+                            <p class="m1830-solution">Values of x where ${f}&#39;\left( x \right)=0:$</p>
+                            <p class="m1830-solution">$\frac{0}{1}=\frac{-23}{{{\left( 2x-5 \right)}^{2}}}$</p>
+                            <p class="m1830-solution">$-23 \neq 0$. There are no values of x where ${f}&#39;\left( x \right)=0.$</p>
+                            <p class="m1830-solution">Values of x where ${f}&#39;\left( x \right)$ is undefined:</p>
+                            <p class="m1830-solution">$2x-5=0$, $ x=\frac{5}{2}$</p>
+                            <p class="m1830-solution">Values of x where $f\left( x \right)$ is undefined:</p>
+                            <p class="m1830-solution">$2x-5=0$, $x=\frac{5}{2}$</p>
+                            <p class="m1830-solution">Separate into intervals using: $x=\frac{5}{2}$.</p>
+
+                            <figure class="m1830-solution"> <img src="images/notes/u3s3p1a.png" alt="Image of graph of F prime of x as it relates to the x axis. Separates graph into intervals divided by partitions where F prime equals zero, or is undefined.  Also indicates intervals where derivative is positive and intervals where derivative is negative.">
+                            <figcaption class="m1830-solution"><em>Sign graph of ${f}&#39;(x)$ reading left to right: negative, ${f}&#39;\left( \frac{5}{2} \right)\text{= undefined}$, negative</em></figcaption></figure>
+                            <p>Increasing: </p>
+                            <p class="m1830-answer">The graph of the first derivative is never above the x axis. Therfore, there are no intervals where $f(x)$ is increasing.</p>
+
+                            <p>Decreasing: </p>
+                            <p class="m1830-answer">$\left( -\infty ,\frac{5}{2} \right)\cup \left( \frac{5}{2},\infty \right)$ The graph of the first derivative is always below the x axis. Therefore, the function is decreasing over the entire domain.</p>
+                        </li>
+                        <li>
+                            <p>Local Maxima: </p>
+                            <p class="m1830-answer">The first derivative never changes from positive to negative. There are no local maxima.</p>
+
+                            <p>Local Minima:</p>
+                            <p class="m1830-answer">The first derivative never changes from negative to positive. There are no local minima.</p>
+
+
+                        </li>
+                  
+
+
+            <li>            <p>Concave Up and Concave Down</p>
+                        <p class="m1830-solution">${f}&#39;&#39;\left( x \right)=-23\left( -2 \right){{\left( 2x-5 \right)}^{-3}}\left( 2 \right)=\frac{92}{{{\left( 2x-5 \right)}^{3}}}$</p>
+
+
+                        <p class="m1830-solution">Values of x where ${f}&#39;&#39;(x)=0$:</p>
+                        <p class="m1830-solution">There are no values of x where ${f}&#39;&#39;\left( x \right)=0$.</p>
+                        <p class="m1830-solution">Values of x where ${f}&#39;&#39;\left( x \right)$ is undefined:</p>
+                        <p class="m1830-solution"> $ 2x-5=0$</p>
+                        <p class="m1830-solution">$ x=\frac{5}{2}$</p>
+                        <p class="m1830-solution">Values of x where $f\left( x \right)$is undefined:</p>
+                        <p class="m1830-solution"> $2x-5=0$</p>
+                        <p class="m1830-solution">$x=\frac{5}{2}$</p>
+                        <p class="m1830-solution">Separate into intervals using:  $x=\frac{5}{2}$.</p>
+
+                        <figure class="m1830-solution" ><img src="images/notes/u3s3p1b.png" alt="Graph of Second Derivative of f of x  and how it relates to the x axis.  Intervals are separated by values of x where the second derivative equals 0 or is undefined.  Values where f of x is undefined also serve to segment intervals.  The graph indicates intervals where the second derivative of f of x  is positive and where the second derivative is negative.">
+                        <figcaption class="m1830-solution"><em>Sign chart for ${f}&#39;&#39;\left( x \right)$: negative, ${f}&#39;&#39;\left( \frac{5}{2} \right)=$ undefined, positive</em></figcaption></figure>
+                        <p class="m1830-pagebreak">Concave up:</p>
+                        <p class="m1830-answer">The graph of $f(x)$ is concave up on the interval $\left( \frac{5}{2},\infty \right).$</p>
+
+                        <p>Concave down:</p>
+                        <p class="m1830-answer">The graph of $f(x)$ is concave down on the interval $\left( -\infty ,\frac{5}{2} \right).$</p>
+</li>
+                    <li>    <p>Inflection Points:</p>
+                        <p class="m1830-answer">Even though the function changes from concave down to concave up at $x=\frac{5}{2}$, there are no points of inflection because the function is undefined at $x=\frac{5}{2}.$</p>
+
+                        <p class="m1830-answer"><img src="images/notes/u3s3p1c.png" alt="Graph of f of x indicating intervals of increase, intervals of decrease, local maxima and local minima"></p>
+</li>
+</ol>
+</li>
+              
+
+   
+
+<p class="m1830-pagebreak"></p>
+            <h4>3.6 Lecture</h4>
+            <p class="m1830-problem-text"><strong>Use the First & Second Derivative Tests to analyze the function. Identify x- & y-intercepts, any holes or asymptotes (if they exist), intervals of increase/decrease, extrema, interval of concavity, and inflection points on the graph of the function.</strong> </p>
+        
+             
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $f(x)=\frac{4x-7}{5x+1}$</p>
+
+                    <ol>
+                        <li>
+                            <p>Increasing and Decreasing</p>
+
+                            <p class="m1830-solution">${f}&#39;\left( x \right)=\frac{4\left( 5x+1 \right)-5\left( 4x-7 \right)}{{{\left( 5x+1 \right)}^{2}}}=\frac{20x+4-20x+35}{{{\left(5x+1 \right)}^{2}}}=\frac{39}{{{\left(5x+1 \right)}^{2}}}$</p>
+
+                            <p class="m1830-solution">Values of x where ${f}&#39;\left( x \right)=0:$</p>
+                            <p class="m1830-solution">$\frac{0}{1}=\frac{39}{{{\left( 5x+1 \right)}^{2}}}$</p>
+                            <p class="m1830-solution">$39 \neq 0$. There are no values of x where ${f}&#39;\left( x \right)=0.$</p>
+                            <p class="m1830-solution">Values of x where ${f}&#39;\left( x \right)$ is undefined:</p>
+                            <p class="m1830-solution">$5x+1=0$, $ x=-\frac{1}{5}$</p>
+                            <p class="m1830-solution">Values of x where $f\left( x \right)$ is undefined:</p>
+                            <p class="m1830-solution">$5x+1=0$, $ x=-\frac{1}{5}$</p>
+                            <p class="m1830-solution">Separate into intervals using: $x=-\frac{1}{5}$.</p>
+
+                            <figure class="m1830-solution"> <img src="images/notes/u3s2p2fa.png" alt="Image of graph of F prime of x as it relates to the x axis. Separates graph into intervals divided by partitions where F prime equals zero, or is undefined.  Also indicates intervals where derivative is positive and intervals where derivative is negative.">
+                            <figcaption class="m1830-solution"><em>Sign graph of ${f}&#39;(x)$ reading left to right: positive, ${f}&#39;\left( -\frac{1}{5} \right)\text{= undefined}$, positive</em></figcaption></figure>
+                            <p>Increasing: </p>
+                            <p class="m1830-answer">$\left( -\infty ,-\frac{1}{5} \right)\cup \left( -\frac{1}{5},\infty \right)$ The graph of the first derivative is always above the x axis. Therefore, the function is increasing over the entire domain.</p>
+
+
+                            <p>Decreasing: </p>
+                            <p class="m1830-answer">The graph of the first derivative is always above the x axis. Therfore, there are no intervals where $f(x)$ is decreasing.</p>
+                        </li>
+                        <li>
+                            <p>Local Maxima: </p>
+                            <p class="m1830-answer">The first derivative never changes from positive to negative. There are no local maxima.</p>
+
+                            <p>Local Minima:</p>
+                            <p class="m1830-answer">The first derivative never changes from negative to positive. There are no local minima.</p>
+
+
+                        
+                        </li>
+                   
+
+             
+
+
+
+                            <li>            <p>Concave Up and Concave Down</p>
+                                        <p class="m1830-solution">${f}&#39;&#39;\left( x \right)=39\left( -2 \right){{\left( 5x+1 \right)}^{-3}}\left( 5 \right)=-\frac{390}{{{\left( 5x+1 \right)}^{3}}}$</p>
+                
+                
+                                        <p class="m1830-solution">Values of x where ${f}&#39;&#39;(x)=0$:</p>
+                                        <p class="m1830-solution">There are no values of x where ${f}&#39;&#39;\left( x \right)=0$.</p>
+                                        <p class="m1830-solution">Values of x where ${f}&#39;&#39;\left( x \right)$ is undefined:</p>
+                                        <p class="m1830-solution"> $ 5x+1=0$</p>
+                                        <p class="m1830-solution">$ x=-\frac{1}{5}$</p>
+                                        <p class="m1830-solution">Values of x where $f\left( x \right)$is undefined:</p>
+                                        <p class="m1830-solution"> $5x+1=0$</p>
+                                        <p class="m1830-solution">$x=-\frac15$</p>
+                                        <p class="m1830-solution">Separate into intervals using:  $x=-\frac{1}{5}$. </p>
+                
+                                        <figure class="m1830-solution"><img src="images/notes/u3s2p2fb.png" alt="Graph of Second Derivative of f of x  and how it relates to the x axis.  Intervals are separated by values of x where the second derivative equals 0 or is undefined.  Values where f of x is undefined also serve to segment intervals.  The graph indicates intervals where the second derivative of f of x  is positive and where the second derivative is negative.">
+                                        <figcaption class="m1830-solution"><em>Sign chart for ${f}&#39;&#39;\left( x \right)$: positive, ${f}&#39;&#39;\left( -\frac{1}{5} \right)=$ undefined, negative</em></figcaption></figure>
+                                        <p>Concave up:</p>
+                                        <p class="m1830-answer">The graph of $f(x)$ is concave up on the interval $\left( -\infty ,-\frac{1}{5} \right).$</p>
+                
+                
+                                        <p>Concave down:</p>
+                                      <p class="m1830-answer">The graph of $f(x)$ is concave down on the interval $\left( -\frac{1}{5},\infty \right).$</p>
+                </li>
+                                    <li>    <p>Inflection Points:</p>
+                                        <p class="m1830-answer">Even though the function changes from concave up to concave down at $x=-\frac{1}{5}$, there are no points of inflection because the function is undefined at $x=-\frac{1}{5}.$</p>
+                      <p class="m1830-answer"><img src="images/notes/u3s2p2fc.png" alt="Graph of f of x indicating intervals of increase, intervals of decrease, local maxima and local minima"></p>
+                </li>
+                </ol>
+                </li>
+
+
+                <p class="m1830-pagebreak"></p>
+<h4>3.6 Group Work</h4>
+
+<p class="m1830-problem-text"><strong>Use the First & Second Derivative Tests to analyze the function. Identify x- & y-intercepts, any holes or asymptotes (if they exist), intervals of increase/decrease, extrema, interval of concavity, and inflection points on the graph of the function.</strong> </p>
+        
+             
+
+<li class="m1830-problem">
+    <p class="m1830-problem-text"> $f(x)=\frac{x^2+2x-8}{x+5}$</p>
+
+    <ol>
+        <li>
+            <p>Increasing and Decreasing</p>
+
+            <p class="m1830-solution">${f}&#39;(x)=\frac{(2x+2)(x+5)-1(x^2+2x-8)}{(x+5)^2}=\frac{2x^2+10x+2x+10-x^2-2x+8}{(x+5)^2}=\frac{x^2+10x+18}{(x+5)^2}$</p>
+
+            <p class="m1830-solution">Values of x where ${f}&#39;\left( x \right)=0:$ </p>
+            <p class="m1830-solution">$\frac{0}{1}=\frac{x^2+10x+18}{(x+5)^2}$</p>
+            <p class="m1830-solution">$x^2+10x+18=0$</p>
+            <p class="m1830-solution">This will not factor so use Desmos.com</p>
+            <p class="m1830-solution">$ {f}&#39;(x)=0$ at $x=-7.646$ and $x=-2.354$</p>
+            <p class="m1830-solution">Values of x where ${f}&#39;(x)$ is undefined:</p>
+            <p class="m1830-solution">$x+5=0$, $ x=-5$</p>
+            <p class="m1830-solution">Values of x where $f(x)$ is undefined:</p>
+            <p class="m1830-solution">$x+5=0$, $ x=-5$</p>
+            <p class="m1830-solution">Separate number line into intervals using: $x=-7.646, -5, and -2.354$.</p>
+
+            <figure class="m1830-solution"><img src="images/notes/3.6numberlinek.png" alt="Number line with critical values and partitions marked on the x-axis.  Critical values are -7.646 and -2.354.  the partition is at -5.  Test values are also labeled on the number line:  -8, -6, 0, and -3.  There are arrows above the number line indicating where the graph is increasing and decreasing.  The arrows are pointing up in the intervals from negative infinity to -7.646 and from -2.354 to infinity.  The arrows are pointing down on the intervals from -7.646 to -5 and -5 to -2.354.">
+            <p>Increasing: &nbsp; $(-\infty,-7.646)$ U $(-2.354,\infty)$</p>
+
+
+            <p>Decreasing: &nbsp; $(-7.646, -5)$ U $(-5, -2.354)$ </p>
+          
+        </li>
+        <li>
+            <p>Local Maxima: </p>
+            <p class="m1830-answer">$(-7.646, -13.292)$</p>
+
+            <p>Local Minima:</p>
+            <p class="m1830-answer">$(-2.354, -2.708)$</p>
+
+
+        
+        </li>
+   
+
+
+
+
+
+            <li>            <p>Concave Up and Concave Down</p>
+                        <p class="m1830-solution">${f}&#39;&#39;=\frac{(2x+10)(x+5)^2-2(x+5)(x^2+10x+18)}{(x+5)^4}$</p>
+                        <p class="m1830-solution">${f}&#39;&#39;=\frac{(2x+10)(x+5)-2(x^2+10x+18)}{(x+5)^3}$</p>
+                        <p class="m1830-solution">${f}&#39;&#39;=\frac{2x^2+10x+10x+50-2x^2-20x-36}{(x+5)^3}$</p>
+                        <p class="m1830-solution">${f}&#39;&#39;=\frac{14}{(x+5)^3}$</p>
+                        <p class="m1830-solution">Values of x where ${f}&#39;&#39;(x)=0$:</p>
+                        <p class="m1830-solution">There are no values of x where ${f}&#39;&#39;\left( x \right)=0$.</p>
+                        <p class="m1830-solution">Values of x where ${f}&#39;&#39;(x)$ is undefined:</p>
+                        <p class="m1830-solution"> $ x+5=0$</p>
+                        <p class="m1830-solution">$ x=-5$</p>
+                        <p class="m1830-solution">Values of x where $f\left( x \right)$is undefined:</p>
+                        <p class="m1830-solution"> $x+5=0$</p>
+                        <p class="m1830-solution">$x=-5$</p>
+                        <p class="m1830-solution">Separate into intervals using:  $x=-5$. </p>
+
+                        <figure class="m1830-solution"><img src="images/notes/3.6numberlineconcavityk.png" alt="Number line with the partition marked on the x-axis at -5.  Test values are also labeled on the number line:-6 and -3.  There are u's above the number line indicating where the graph is concave up and down.  The concave up u is in the interval from negative infinity to -5 to infinity.  The concave down u is on the interval-5 to infinity.">       
+                        <p class="m1830-answer">The graph of $f(x)$ is concave up on the interval $( -5 , \infty).$</p>
+
+
+                        <p>Concave down:</p>
+                      <p class="m1830-answer">The graph of $f(x)$ is concave down on the interval $( -\infty, -5).$</p>
+</li>
+                    <li>    <p>Inflection Points:</p>
+                        <p class="m1830-answer">Even though the function changes from concave up to concave down at $x=-5$, there are no points of inflection because the function is undefined at $x=-5.$</p>
+     
+</li>
+</ol>
+</li>
+<p class="m1830-pagebreak"></p>
+
+<li>
+    <strong>Construct a sketch of the graph of a function of $f$ that has the given properties.</strong>
+    <ol>
+        <li>$f(x)$ &nbsp; is such that
+            <ul>
+                <li>$f&#39;(5)=0$</li>
+                <li>$f&#39;(x)< 0$ &nbsp;on the interval $(-\infty,5)$</li>
+                <li>$f&#39;(x)>0$ &nbsp;on the interval $(5,\infty)$</li>
+                <li>$f&#39;&#39;(x)>0$ &nbsp;on the interval $(-\infty,\infty)$</li>
+            </ul>
+          <img src="images/notes/blankgraph.png" alt="Blank coordinate plane graph with both the x- and y-axes going from -5 to 5.">
+        </li>
+        <p class="m1830-pagebreak"></p>
+        <li>
+            <ul>
+                <li>$f(0)=2$</li>
+                <li>$f&#39;(-3)=0$ and $f&#39;(4)=0$</li>
+                <li>$f&#39;(x)<0$ &nbsp; on the interval $(-3,4)$</li>
+                <li>$f&#39;(x)>0$ &nbsp; on the intervals $(-\infty,-3)$ &nbsp and &nbsp; $(4,\infty)$</li>
+                <li>$f&#39;&#39;(x)<0$ &nbsp;on the interval $(-\infty,0)$</li>
+                <li>$f&#39;&#39;(x)>0$ &nbsp;on the interval $(0,\infty)$</li>
+            </ul>
+            <img src="images/notes/blankgraph.png" alt="Blank coordinate plane graph with both the x- and y-axes going from -5 to 5.">
+        </li>
+        <p class="m1830-pagebreak"></p>
+        <li>
+            <ul>
+                <li>$f(4)$ is undefined</li>
+                <li>$f&#39;(4)$ is undefined</li>
+                <li>$f&#39;&#39;(4)$ is undefined</li>
+                <li>$f(0)=0$</li>
+                <li>$f&#39;(x)<0$ &nbsp; on the intervals $(-\infty,4)$ &nbsp and &nbsp; $(4,\infty)$</li>
+                <li>$f&#39;(x)>0$ nowhere</li>
+                <li>$f&#39;&#39;(x)<0$ on the interval $(-\infty,4)$</li>
+                <li>$f&#39;&#39;(x)>0$ on the interval $(4, \infty)$</li>
+            </ul>
+        </li>
+    </ol>
+</li>
+
+
+
+<p class="m1830-pagebreak"></p>
+<h4>3.6 Additional Practice</h4>
+<p class="m1830-problem-text"><strong>Use the First & Second Derivative Tests to analyze the function. Identify x- & y-intercepts, any holes or asymptotes (if they exist), intervals of increase/decrease, extrema, interval of concavity, and inflection points on the graph of the function.</strong> </p>
+        
+             
+
+<li class="m1830-problem">
+    <p class="m1830-problem-text"> $f(x)=\sqrt[3]x-x$</p>
+
+    <ol>
+        <li>
+            <p>Increasing and Decreasing</p>
+
+            <p class="m1830-solution">${f}&#39;(x)=\frac13x^\frac{-2}3-1=\frac1{3\sqrt[3]{x^2}}-1$</p>
+
+            <p class="m1830-solution">Values of x where ${f}&#39;\left( x \right)=0:$ </p>
+            <p class="m1830-solution">$\frac{0}{1}=\frac1{3\sqrt[3]{x^2}}-1$</p>
+            <p class="m1830-solution">$\frac1{3\sqrt[3]{x^2}}=1$</p>
+            
+            <p class="m1830-solution">$3\sqrt[3]{x^2}=1$</p>
+            <p class="m1830-solution">$\sqrt[3]{x^2}=\frac13$</p>
+            <p class="m1830-solution">$x^2=\frac1{27}$</p>
+            <p class="m1830-solution">$x=\pm\sqrt{\frac1{27}}$</p>
+
+            <p class="m1830-solution">$ {f}&#39;(x)=0$ at $x=-0.192$ and $x=0.192$</p>
+            <p class="m1830-solution">Values of x where ${f}&#39;(x)$ is undefined:</p>
+            <p class="m1830-solution">$\sqrt[3]{x^2}=0$, $ x=0$</p>
+            <p class="m1830-solution">Values of x where $f(x)$ is undefined:</p>
+            <p class="m1830-solution">There is nowhere that $f(x)$ &nbsp;is undefined</p>
+            <p class="m1830-solution">Separate number line into intervals using: $x=-0.192, x=0, x=0.192$.</p>
+
+            <figure class="m1830-solution"><img src="images/notes/3.6additionalpracticeincdec.png" alt="Number line with critical values and partitions marked on the x-axis.  Critical values are -0.192 and 0.192.  the partition is at 0.  Test values are also labeled on the number line:  -1, -0.01, 0.01, and 1.  There are arrows above the number line indicating where the graph is increasing and decreasing.  The arrows are pointing Down in the intervals from negative infinity to -0.192 and from 0.192 to infinity.  The arrows are pointing up on the intervals from -0.192 to 0 and 0 to 0.192.">
+            <p>Increasing: &nbsp; $(-0.192,0)$ U $(0,0.192)$</p>
+
+
+            <p>Decreasing: &nbsp; $(-\infty, -0.192)$ U $(0.192, \infty)$ </p>
+          
+        </li>
+        <li>
+            <p>Local Maxima: </p>
+            <p class="m1830-answer">$(0.192, 0.385)$</p>
+
+            <p>Local Minima:</p>
+            <p class="m1830-answer">$(-0.192, -0.385)$</p>
+
+
+        
+        </li>
+   
+
+
+
+
+
+            <li>            <p>Concave Up and Concave Down</p>
+                        <p class="m1830-solution">${f}&#39;&#39;(x)=-\frac23\left(\frac13x^{\frac{-2}3-1}\right)=-\frac29x^\frac{-5}3$</p>
+                       
+                        <p class="m1830-solution">${f}&#39;&#39;(x)=-\frac2{9\sqrt[3]{x^5}}$</p>
+                        <p class="m1830-solution">Values of x where ${f}&#39;&#39;(x)=0$:</p>
+                        <p class="m1830-solution"> $-\frac2{9\sqrt[3]{x^5}}=\frac01$.</p>
+                        <p class="m1830-solution"> $-2=0$.</p>
+                        <p class="m1830-solution"> There are no critical values for ${f}&#39;&#39;(x)$ .</p>
+                        <p class="m1830-solution">Values of x where ${f}&#39;&#39;(x)$ is undefined:</p>
+                        <p class="m1830-solution"> $\sqrt[3]{x^5}=0$</p>
+                        <p class="m1830-solution">$ x=0$</p>
+                        <p class="m1830-solution">Values of x where $f\left( x \right)$is undefined:</p>
+                        <p class="m1830-solution">There are no values of x where $f\left( x \right)$is undefined.</p>
+                        <p class="m1830-solution">Separate into intervals using:  $x=0$. </p>
+
+                        <figure class="m1830-solution"><img src="images/notes/3.6additionalpracticeconcave.png" alt="Number line with the partition marked on the x-axis at 0.  Test values are also labeled on the number line:-1 and 1.  There are u's above the number line indicating where the graph is concave up and down.  The concave up u is in the interval from negative infinity to 0 to infinity.  The concave down u is on the interval0 to infinity.">   
+                            
+                          <p>Concave up:</p>  
+                        <p class="m1830-answer">The graph of $f(x)$ is concave up on the interval $( -\infty, 0).$</p>
+
+
+                        <p>Concave down:</p>
+                      <p class="m1830-answer">The graph of $f(x)$ is concave down on the interval $( 0 , \infty).$</p>
+</li>
+                    <li>    <p>Inflection Points:</p>
+                        <p class="m1830-answer">Even though the function changes from concave up to concave down at $x=0$, there is no point of inflection because the second derivative is undefined at $x=0.$</p>
+     
+</li>
+</ol>
+</li>
+
+            </ol>
+
+
+
+
+
+
+
+
+    </div>
+    <!-- ending of body container -->
+</body>
+
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MATH 1830 Notes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/notes.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/togglebuttons.js"></script>
+    <script src="js/loadmathjax.js"></script>
+   <script src="js/googlestats.js"></script>     
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>   
+   <script src="js/nav.js"></script>     
+   <script src="js/togglepass.js"></script>
+    <!-- <script src="https://www.desmos.com/api/v0.6/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+    <script src="js/desmosgraphs.js"></script> -->
+
+
+</head>
+
+<body>
+ <nav ng-app="myApp" ng-controller="myCtrl" class="navbar navbar-default navbar-fixed-top">          <div class="container-fluid">              <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"                     aria-expanded="false">              <span class="sr-only">Toggle navigation</span>              <span class="icon-bar"></span>              <span class="icon-bar"></span>              <span class="icon-bar"></span>           </button> <a class="navbar-brand" ng-href="{{nav.titleUrl}}">{{nav.title}}</a> </div>              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">                 <ul class="nav navbar-nav">                      <li ng-repeat="u in nav.unit" class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"                             title="{{u.title}}">{{u.title}}<span class="caret"></span></a>                         <ul class="dropdown-menu">                             <li ng-repeat="n in u.nav"><a ng-href="{{n.url}}">{{n.urlText}}</a></li>                           </ul>                     </li>                  </ul>                 <ul class="nav navbar-nav navbar-right">                     <form class="navbar-form navbar-left">                         <div class="form-group">                             <input id="input" type="password" class="form-control" placeholder="pin-code">                         </div>                         <button id="submit" type="submit" class="btn btn-default">Show Solutions</button>                     </form>                   </ul>             </div>         </div>     </nav>
+
+
+    <div class="container">
+        <h1 id="u4toc">MATH 1830</h1>
+
+          <h2>Unit 4: Integration</h2>
+
+
+        <div class="pagebreak"></div>
+
+
+
+<article class="notes">
+
+                <h3>4.1 Area by Sums</h3>
+ 
+          
+
+                     <h4 class="m1830-pagebreak">Introduction</h4>
+
+
+
+                
+                <ol>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            The rate of change of the population (in thousands of people per year) of Sevier County Tennessee between 2010 and 2022 can be modeled by</p>
+
+                            <p>  $p(t)=
+                            \begin{cases}
+
+
+
+                                  0.89  & 0\leq t\leq 10 \\
+                                  -0.45  & 10 \lt t \leq 12\\
+
+
+                            \end{cases}
+
+                            $
+                            where t represents the number of
+                             years since 2010.
+                        </p>
+
+                        <!-- <p><cite>(Source: Statistical Abstract, 1998)</cite></p> -->
+                        <ol>
+
+                            <li>Sketch a graph of the rate of change function.
+                                <p><img src="images/notes/u4s1p1i.png" alt="Blank Cartesian Plane"></p>
+
+                                    <p class="m1830-solution"><img src="images/notes/u4s1p1ia.png" alt="Graph of Change in Population of Sevier County TN.  Two horizontal lines.  Graph of y=0.89 from x=0 to x=10.  Graph of y=-0.45 from x&gt;10 to x=12."></p>
+                            </li>
+<p class="m1830-pagebreak"></p>
+                            <li>Find the area of the region between the graph of p and the horizontal axis from 0 to 10. Interpret your answer.
+                                <p class="m1830-solution">$A=lw$</p>
+                                <p class="m1830-solution">$A=0.89(10)$</p>
+                                <p class="m1830-solution">$A=8.9$</p>
+                                <p class="m1830-answer">There was a 8.9 thousand person increase in population between 2010 and 2022.</p>
+                            </li>
+
+                            <li>Find the area of the region between the graph of p and the horizontal axis from 10 to 12. Interpret your answer.
+                                <p class="m1830-solution">$A=lw$</p>
+                                <p class="m1830-solution">$A=-0.45(2)$</p>
+                                <p class="m1830-solution">$A=-0.9$</p>
+                                <p class="m1830-answer">There was a 0.9 thousand person decrease in population between 2020 and 2022.</p>
+                            </li>
+
+                            <li>Was the population of Sevier County in 2022 greater or less than the population in 2010? By how much did the population change between 2010 and 2022?
+                                <p class="m1830-solution">$8.9-0.9=8$</p>
+                                <p class="m1830-answer">In 2022 the population of Sevier County was 8 thousand people more than in 2010.</p>
+                            </li>
+
+                            <li>What information would you need to determine the population of Sevier County in 2022?
+                                <p class="m1830-answer">We need to know the population of Sevier County in 2010.  If we know the population count for 2010, we can calculate the population in 2022 by adding 8,000 to the 2010 population count.</p>
+                            </li>
+
+                            <li>What is the relationship between the area of the regions and the population of Sevier County?
+                                <p class="m1830-answer">Each area represents the total change in population for the time period.</p> </li>
+                        </ol>
+                    </li>
+
+                  
+
+
+                <p class="m1830-pagebreak"></p> 
+    <h4>4.1 Video</h4>
+           
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            Estimate the area under the curve $f(x) = {x^2}$ on the domain [0,4] by summing the areas of the four Right Hand Rectangles. Is your estimate greater than the actual area or less than the actual area?</p>
+                        <p><img src="images/notes/u4s1p1a.png" alt="Graph of y=x squared on the interval from x=0 to x=4 with right-rectangles drawn"></p>
+
+                            <p class="m1830-solution">$A\approx 1(1)+1(4)+1(9)+1(16)=1+4+9+16=30\;units^2$</p>
+                            <p class="m1830-answer">This estimate is more than the actual area.</p>
+
+                            <p class="m1830-pagebreak"><img src="images/notes/u4s1p1b.png" alt="Graph of y=x squared on the interval from x=0 to x=4 with left-rectangles drawn"></p>
+                                <p>Left Hand Rectangles</p>
+                                <p class="m1830-solution">$A\approx1(0)+1(1)+1(4)+1(9)=0+1+4+9=14\;units^2$</p>
+                                <p class="m1830-answer"> This estimate is less than the actual area.</p>
+                                <img src="images/notes/u4s1p1c.png" alt="Graph of y=x squared on the interval from x=0 to x=4 with midpoint-rectangles drawn">
+                                <p>Mid-Point Rectangles</p>
+                                <p class="m1830-solution">$A\approx 1(.25)+1(2.25)+1(6.25)+1(12.25)=.25+2.25+6.25+12.25=21\;units^2$</p>
+
+                                <p class="m1830-answer">This estimate is slightly less than the actual area.</p>
+
+                    </li>
+                    <p class="m1830-pagebreak"></p>
+<h4>4.1 Lecture</h4>
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            Use 3 Right Hand Rectangles to estimate the area under the curve $f(x) = 2x$ on the domain [1,4].</p>
+                        <img src="images/notes/u4s1p2.png" alt="Graph of y=2x on the interval from x=1 to x=4">
+                        <p class="m1830-solution">$A\approx1(4)+1(6)+1(8)$</p>
+                        <p class="m1830-solution">$A\approx4+6+8$</p>
+                        <p class="m1830-answer">$A\approx 18\;units^2$</p>
+                        <p>Is this estimate less than the actual area or greater than the actual area?</p>
+                        <p class="m1830-answer">This estimate is more than the actual area.</p>
+
+                    </li>
+                    <p class="m1830-pagebreak"></p>
+<h4>4.1 Group Work</h4>
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            Use 3 Mid-Point Rectangles to estimate the area under the curve $f(x) = {x^3}$ on the domain [1,4].</p>
+                        <img src="images/notes/u4s1p3.png" alt="Graph of y=x cubed on the interval from x=1 to x=4">
+                        <p class="m1830-solution">$A\approx 1{(1.5)^3} + 1{(2.5)^3} + 1{(3.5)^3}$</p>
+                        <p class="m1830-solution">$A\approx 3.375 + 15.625 + 42.875$</p>
+                        <p class="m1830-answer">$A\approx 61.875\;units^2$</p>
+                        <p>Is this estimate less than the actual area or greater than the actual area?</p>
+                        <p class="m1830-answer">This estimate is less than the actual area.</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            Use 3 Left Hand Rectangles to estimate the area under the curve $f(x) = \frac{1}{x}$ on the domain [0.5, 2.0].</p>
+                        <img src="images/notes/u4s1p4.png" alt="Graph of y=1/x on the interval from x=0.5 to x=2.0">
+                        <p class="m1830-solution">$A\approx \frac{1}{2}\left( {\frac{1}{{.5}}} \right) + \frac{1}{2}\left( {\frac{1}{1}} \right) + \frac{1}{2}\left( {\frac{1}{{1.5}}} \right)$</p>
+                        <p class="m1830-solution">$A\approx \frac{1}{2}(2) + \frac{1}{2}(1) + \frac{1}{2}\left( {\frac{2}{3}} \right)$</p>
+                        <p class="m1830-solution">$A\approx 1 + \frac{1}{2} + \frac{1}{3}$</p>
+                        <p class="m1830-answer">$A\approx 1.83\;units^2$</p>
+                        <p>Is this estimate less than the actual area or greater than the actual area?</p>
+                        <p class="m1830-answer">This estimate is greater than the actual area.</p>
+
+
+
+                    </li>
+             
+
+                    <p class="m1830-pagebreak"></p>
+
+
+      <h4>Additional Practice</h4>
+   
+
+          <li class="m1830-problem">
+              <p class="m1830-problem-text"> A person walking along a straight path has her velocity in miles per hour at time t given by the function $$v(t)=0.25{{t}^{3}}-1.5{{t}^{2}}+3t+0.25,$$ for times in the interval $0\le t\le 2$. The graph of this function is also given
+                  in each of the three diagrams below.</p>
+              <img src="images/hw/u4s1p1.png" alt="enter image description here">
+              <ol>
+
+                  <li>Estimate the area under each of the curves by summing the areas of the rectangles.
+                      <p>Left Rectangles: $A_1+A_2+A_3+A_4$</p>
+                      <p class="m1830-hw-answer">$.5(.25)+.5(1.4063)+.5(2)+.5(2.2188)=2.93755$</p>
+                      <p>Right Rectangles: $B_1+B_2+B_3+B_4$</p>
+                      <p class="m1830-hw-answer">$.5(1.4063)+.5(2)+.5(2.2188)+.5(2.25)=3.93755$</p>
+                      <p>Midpoint Rectangles: $C_1+C_2+C_3+C_4$</p>
+                      <p class="m1830-hw-answer">$.5(.91)+.5(1.7617)+.5(2.1445)+.5(2.2461)=3.53115$</p>
+                  </li>
+
+                  <li>Why are the three answers different?
+                      <p class="m1830-hw-answer">Each estimates the area under the curve using different size rectangles.</p>
+                  </li>
+
+                  <li>Of the three estimates from part a, which do you think is the best approximation of the area under the curve?
+                      <p class="m1830-hw-answer">Using midpoints gives the best approximation.</p>
+                  </li>
+
+                  <li>How could you get a better approximation for the area under the curve?
+                      <p class="m1830-hw-answer">We would get a better approximation if we used more rectangles.</p>
+                  </li>
+
+                  <li>What does the area under the curve represent?
+                      <p class="m1830-hw-answer">The area under the curve represents the total distance walked: $\frac{miles}{hour}\ast hour=miles.$</p>
+                  </li>
+              </ol>
+              <p><cite class="cc">Source: Active Calculus by Matthew Boelkins is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.  Based on a work at <a href="http://scholarworks.gvsu.edu/books/10/">http://scholarworks.gvsu.edu/books/10/</a>.</cite></p>
+          </li>
+
+          <li class="m1830-problem">
+              <p class="m1830-problem-text"> Given the function $f(x)=4-0.16{{x}^{2}}$,</p>
+              <img src="images/hw/u4s1p2.png" alt="enter image description here"> approximate the area under the curve on the interval [0, 6] using 6 right rectangles.
+              <p class="m1830-hw-solution">$A \approx 1[f(1)]+1[f(2)]+1[f(3)]+1[f(4)]+1[f(5)]+1[f(6)]$</p>
+              <p class="m1830-hw-solution">$A \approx 1(3.84)+1(3.36)+1(2.56)+1(1.44)+1(0)+1(-1.76)$</p>
+              <p class="m1830-hw-answer">$A\approx 9.44\;unit{{s}^{2}}$</p>
+
+          </li>
+
+          <li class="m1830-problem">
+              <p class="m1830-problem-text"> The rate of change of per capita consumption of a certain type of cheese in the United States from 1982 through 2002 can be modeled as $$C'\left( x \right)=-0.0011{{x}^{2}}+0.02x+0.2399$$ pounds per person per year where $x$ is
+                  the number of years since 1970.</p>
+              <img src="images/hw/u4s1p3.png" alt="enter image description here">
+              <ol>
+<!-- todo  give a starting point for 1982, maybe 21, and ask students to graph consumption based on c' values each year. -->
+                  <li>According to the graph of $C'(x)$, when was the per capita consumption of this cheese growing and when was it declining?
+                      <p class="m1830-hw-answer">Growing: 1982 to about half way thru 1996</p>
+                      <p class="m1830-hw-answer">Declining: mid-1996 through 2002</p>
+                  </li>
+
+                  <li>Find the point of the graph of $C'(x)$ that corresponds to the time when the per capita consumption of this cheese, $C(x)$, was the greatest.  Explain.
+                      <p class="m1830-hw-answer">Per capita consumption greatest at $x=26.43$ years or sometime in 1996</p>
+                  </li>
+
+                  <li>Estimate using 7 right rectangles the area lying above the x-axis and below the graph of $C'(x)$ over the interval in part a. Interpret your answer.
+                      <p class="m1830-hw-solution">$A\approx2(.0343)+2(.2783)+2(.2435)+2(.1999)+2(.1475)+2(.0863)+2(.0163)=2.5522$</p>
+                      <p class="m1830-hw-answer">Total per capita consumption of this cheese grew by 2.5522 pounds per person from 1982 to mid 1996.</p>
+                  </li>
+
+
+                  <li>Estimate using 3 right rectangles the area lying below the x-axis and above the graph of $C'(x)$ over the interval in part a. Interpret your answer.
+                      <p class="m1830-hw-solution">$A\approx 2(-.0625)+2(-.1501)+2(-.2465)=-.9182$</p>
+                      <p class="m1830-hw-answer">Total per capital consumption of this cheese decreased by .9182 pounds per person from mid 1996 to 2002.</p>
+                  </li>
+
+                  <li>By how much did the per capita consumption of this cheese change between 1982 and 2002?
+                      <p class="m1830-hw-solution">$2.5522-.9182=1.634$</p>
+                      <p class="m1830-hw-answer">Per capita consumption of this cheese grew by 1.634 pounds per person from 1982-2002.</p>
+                  </li>
+
+                  <li>What information do we need to determine the per capita consumption of this cheese in 2002?
+                      <p class="m1830-hw-answer">We would need the actual per capita consumption in 1981 in order to determine the per capita consumption for any other year in the domain of the function.</p>
+                  </li>
+              </ol>
+
+          </li>
+      </ol>
+
+
+
+
+
+            <!-- ending of last section -->
+
+
+    </div>
+    <!-- ending of body container -->
+</body>
+
+</html>

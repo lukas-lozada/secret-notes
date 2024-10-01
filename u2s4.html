@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MATH 1830 Notes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/notes.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/loadmathjax.js"></script>
+    <script src="js/googlestats.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/togglepass.js"></script>
+
+
+
+
+</head>
+
+<body>
+    <nav ng-app="myApp" ng-controller="myCtrl" class="navbar navbar-default navbar-fixed-top">
+
+        <div class="container-fluid">
+
+            <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
+             <span class="sr-only">Toggle navigation</span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+          </button> <a class="navbar-brand" ng-href="{{nav.titleUrl}}">{{nav.title}}</a> </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+
+                    <li ng-repeat="u in nav.unit" class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
+                            title="{{u.title}}">{{u.title}}<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li ng-repeat="n in u.nav"><a ng-href="{{n.url}}">{{n.urlText}}</a></li>
+
+
+                        </ul>
+                    </li>
+
+                </ul>
+                <!-- <ul class="nav navbar-nav navbar-right">
+                    <form class="navbar-form navbar-left">
+                        <div class="form-group">
+                            <input id="input" type="password" class="form-control" placeholder="pin-code">
+                        </div>
+                        <button id="submit" type="submit" class="btn btn-default">Show Solutions</button>
+                    </form>
+
+
+                </ul> -->
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+
+
+        <h1 id="u1toc">MATH 1830</h1>
+      
+
+
+
+
+
+
+        <div class="container">
+            <!-- <h1 id="u1toc">MATH 1830</h1> -->
+    
+            <h2>Unit 2 Applications of Derivatives</h2>
+    
+    
+    
+    
+    
+    
+            <!-- <article class="notes"> -->
+    
+                <h3>2.4 Graph Analysis: Polynomials</h3>
+    
+                
+                <hr>
+    
+                <br><br>
+    
+    
+                <h4>2.4 Video</h4>
+                <p><strong>Matching functions with their derivatives.</strong> </p>
+             
+    
+    
+    
+    
+                <p> Match the function with its first and second derivatives.
+                </p>
+                <img src="images/notes/u2gavideo.png" alt="A polynomial graph, with no numbers on the x- or y-axes, starts with an x-intercept on the left side, is below the x-axis, and decreases until about halfway to the origin where it changes to increasing.  It is concave up from the left to the origin.  At the origin, the graph continues to increase and is above the x-axis.  It increases until about halfway to the right side of the graph where it decreases until it intersects the x-axis.  It is concave down from the origin to the end of the graph on the right.">
+    <ol>
+                <li>Pick the graph of the First Derivative of the function above.</li>
+               
+                <img src="images/notes/u2gavideo1st.png" alt="Four polynomial graphs.  No units on the axes.  #1 from the left: Positive (above the x-axis), increasing for a tiny bit and then decreasing until the origin. Concave down from the left to the origin.  After the origin it is negative (below the x-axis), concave up, decreasing until the very right side of the graph when it changes to increasing.
+                #2: From the left- Positive and decreasing, x-intercept, negative and decreasing, changes to increasing until x-intercept at origin.  Concave up in this interval.  To the right of the origin the function is positive and increasing for a bit and then positive and decreasing until it hits another x-intercept where it becomes negative and decreasing.  It is concave down from the origin to the end of the graph.
+                #3: Negative and decreasing for a bit then increases until it intersects the origin. It is concave up on that interval.  After it crosses the origin, it is positive and continues to increase for a bit and then stays positive but decreases.
+                #4: A parabola that is negative and increasing until it crosses the x-axis to the left of the origin, where it becomes positive and increasing.  It reaches its max at a positive y when x=0 and then decreases throughout the right half of the graph.  It crosses the x-axis again about halfway between the origin and the right side of the graph.">
+                       
+                            <p class="m1830-answer">Graph 4</p>
+                    </li>
+    
+                   
+<li>Pick the graph of the Second Derivative of the function above.</li>
+               
+                    <img src="images/notes/u2gavideo2nd.png" alt="Four polynomial graphs.  No units on the axes.  
+                    Graph A from the left: Negative (below the x-axis) and increasing, x-intercept, positive (above x-axis) and increasing, max at x=0, positive and decreasing, x-intercept, negative and decreasing.  
+                    Graph B from the left: Linear graph with negative slope. Positive and decreasing, x-intercept at the origin, negative and decreasing.
+                    Graph C from the left: Positive and decreasing, x-intercept, negative and decreasing, minimum at x=0, negative and increasing, x-intercept, positive and increasing
+                    Graph D from the left-: A parabola that is negative and increasing, x-intercept, positive and increasing, max at x=0, positive and decreasing, x-intercept, negative and decreasing.">
+                           
+                                <p class="m1830-answer">Graph B</p>
+                        </li>
+
+                        <p><cite> Source <a href="https://people.math.harvard.edu/~knill/teaching/math1a2020/handouts/worksheet08.pdf">Oliver Knill, Knill@math.harvard.edu, Math 1A, Harvard College, Spring 2020</a> </cite></p>
+
+
+    
+                        <p style="page-break-after: always;">&nbsp;</p>
+           
+                <h4>2.4 Lecture</h4>
+                <li> Match the function with its first and second derivatives.
+                </li>
+                <img src="images/notes/u2galecture.png" alt="Four polynomial graphs labeled a-d.
+                Graph a from the left: x-intercept, negative and decreasing, minimum, negative and increasing, x-intercept at origin, positive and increasing, max, positive and decreasing. Concave up from left to origin.  Concave down from origin to the right.
+                Graph b from the left: positive and decreasing, minimum at origin, positive and increasing.  Concave up on the entire graph.
+                Graph c from the left: positive and increasing, maximum point, positive and decreasing, minimum and x-intercept at the origin, positive and increasing, maximum point, positive and decreasing. Concave down from the left to halfway to the origin.  Concave up until midway between the origin the the right side of the graph.  Concave down.
+                Graph d from the left: Parabola.  negative and inceasing, x-intercept, positive and increasing, maximum at x=0, positive and decreasing, x-intercept, negative and decreasing.  ">
+    
+                <p>First Derivatives of the function above.</p>
+               
+                <img src="images/notes/u2gavideo1st.png" alt="Four polynomial graphs.  No units on the axes.  #1 from the left: Positive (above the x-axis), increasing for a tiny bit and then decreasing until the origin. Concave down from the left to the origin.  After the origin it is negative (below the x-axis), concave up, decreasing until the very right side of the graph when it changes to increasing.
+                #2: From the left- Positive and decreasing, x-intercept, negative and decreasing, changes to increasing until x-intercept at origin.  Concave up in this interval.  To the right of the origin the function is positive and increasing for a bit and then positive and decreasing until it hits another x-intercept where it becomes negative and decreasing.  It is concave down from the origin to the end of the graph.
+                #3: Negative and decreasing for a bit then increases until it intersects the origin. It is concave up on that interval.  After it crosses the origin, it is positive and continues to increase for a bit and then stays positive but decreases.
+                #4: A parabola that is negative and increasing until it crosses the x-axis to the left of the origin, where it becomes positive and increasing.  It reaches its max at a positive y when x=0 and then decreases throughout the right half of the graph.  It crosses the x-axis again about halfway between the origin and the right side of the graph.">
+                       
+                          
+                    </li>
+    
+                   
+<p>Second Derivatives of the function above.</p>
+               
+                    <img src="images/notes/u2gavideo2nd.png" alt="Four polynomial graphs.  No units on the axes.  
+                    Graph A from the left: Negative (below the x-axis) and increasing, x-intercept, positive (above x-axis) and increasing, max at x=0, positive and decreasing, x-intercept, negative and decreasing.  
+                    Graph B from the left: Linear graph with negative slope. Positive and decreasing, x-intercept at the origin, negative and decreasing.
+                    Graph C from the left: Positive and decreasing, x-intercept, negative and decreasing, minimum at x=0, negative and increasing, x-intercept, positive and increasing
+                    Graph D from the left-: A parabola that is negative and increasing, x-intercept, positive and increasing, max at x=0, positive and decreasing, x-intercept, negative and decreasing.">
+                           
+                                <p class="m1830-answer">a,4,B</p>
+                                <p class="m1830-answer">b,3,A</p>
+                                <p class="m1830-answer">c,2,D</p>
+                                <p class="m1830-answer">d,1,C</p>
+                        </li>
+
+                        <p><cite> Source <a href="https://people.math.harvard.edu/~knill/teaching/math1a2020/handouts/worksheet08.pdf">Oliver Knill, Knill@math.harvard.edu, Math 1A, Harvard College, Spring 2020</a> </cite></p>
+    
+    
+                        <p style="page-break-after: always;">&nbsp;</p>
+    
+                <h4>2.4 Group Work</h4>
+                <strong>Matching Cards Activity</strong>
+                
+                <br><br>
+                <h4>2.4 Additional Practice</h4>
+                 
+                <p>  <a href="https://english.mathe-online.at/tests/diff1/ablerkennen.html">The Big Derivative Puzzle</a> </p>
+<br>
+                <p>  <a href="https://www.khanacademy.org/math/old-ap-calculus-ab/ab-derivatives-analyze-functions/ab-connecting-func-and-derivatives/e/visualizing_derivatives">Visualizing Derivatives</a> </p>
+<br>
+<p>  <a href="https://www.khanacademy.org/math/old-ap-calculus-ab/ab-derivatives-analyze-functions/ab-connecting-func-and-derivatives/e/visualizing_derivatives">Visualizing Derivatives</a> </p>
+<br>
+<p>  <a href="https://teacher.desmos.com/activitybuilder/custom/57445f483926d71b062f96c7">Desmos Curve Sketching</a> </p>
+<br>
+<p>  <a href="https://webspace.ship.edu/msrenault/geogebracalculus/derivative_try_to_graph.html">Try to Graph the Derivative</a> </p>
+
+
+                </ol>
+                <!-- End section problem list  -->
+    
+            <!-- </article> -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        </div>
+    
+    <!-- ending of body container -->
+
+</body>
+
+</html>
